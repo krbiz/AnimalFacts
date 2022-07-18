@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		321CF1272885B59F005A13BB /* AnimalFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CF1262885B59F005A13BB /* AnimalFactsApp.swift */; };
-		321CF1292885B59F005A13BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CF1282885B59F005A13BB /* ContentView.swift */; };
+		321CF1292885B59F005A13BB /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CF1282885B59F005A13BB /* CategoriesView.swift */; };
 		321CF12B2885B5A3005A13BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321CF12A2885B5A3005A13BB /* Assets.xcassets */; };
 		321CF12E2885B5A3005A13BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321CF12D2885B5A3005A13BB /* Preview Assets.xcassets */; };
+		323D1E9B2885BF1300F3ABA1 /* View+onLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1E9A2885BF1300F3ABA1 /* View+onLoad.swift */; };
+		323D1E9F2885BFF500F3ABA1 /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1E9E2885BFF500F3ABA1 /* CategoryCellView.swift */; };
+		323D1EA22885C2C800F3ABA1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 323D1EA12885C2C800F3ABA1 /* Kingfisher */; };
+		323D1EA52885C56B00F3ABA1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EA42885C56B00F3ABA1 /* Device.swift */; };
+		323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */; };
+		328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */ = {isa = PBXBuildFile; fileRef = 328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */; };
+		328E4F0F2885B85D002C0354 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F0E2885B85D002C0354 /* Category.swift */; };
+		328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F132885BC33002C0354 /* CategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		321CF1232885B59F005A13BB /* AnimalFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321CF1262885B59F005A13BB /* AnimalFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactsApp.swift; sourceTree = "<group>"; };
-		321CF1282885B59F005A13BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		321CF1282885B59F005A13BB /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		321CF12A2885B5A3005A13BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		321CF12D2885B5A3005A13BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		323D1E9A2885BF1300F3ABA1 /* View+onLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+onLoad.swift"; sourceTree = "<group>"; };
+		323D1E9E2885BFF500F3ABA1 /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
+		323D1EA42885C56B00F3ABA1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
+		328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ios-challenge-words-booster.json"; sourceTree = "<group>"; };
+		328E4F0E2885B85D002C0354 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		328E4F132885BC33002C0354 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323D1EA22885C2C800F3ABA1 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				321CF1262885B59F005A13BB /* AnimalFactsApp.swift */,
-				321CF1282885B59F005A13BB /* ContentView.swift */,
-				321CF12A2885B5A3005A13BB /* Assets.xcassets */,
+				328E4F152885BD4E002C0354 /* Shared */,
+				328E4F0A2885B7E6002C0354 /* Categories */,
+				328E4F072885B7C0002C0354 /* Recources */,
 				321CF12C2885B5A3005A13BB /* Preview Content */,
 			);
 			path = AnimalFacts;
@@ -65,6 +82,92 @@
 				321CF12D2885B5A3005A13BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		323D1E9C2885BFD900F3ABA1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				323D1E9E2885BFF500F3ABA1 /* CategoryCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		323D1EA32885C56100F3ABA1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EA42885C56B00F3ABA1 /* Device.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		323D1EA62885C5D200F3ABA1 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		328E4F072885B7C0002C0354 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				321CF12A2885B5A3005A13BB /* Assets.xcassets */,
+				328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		328E4F0A2885B7E6002C0354 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				328E4F0C2885B802002C0354 /* Model */,
+				328E4F0B2885B7F7002C0354 /* View */,
+				328E4F0D2885B80D002C0354 /* ViewModel */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		328E4F0B2885B7F7002C0354 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				323D1E9C2885BFD900F3ABA1 /* Cell */,
+				321CF1282885B59F005A13BB /* CategoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		328E4F0C2885B802002C0354 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				328E4F0E2885B85D002C0354 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		328E4F0D2885B80D002C0354 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				328E4F132885BC33002C0354 /* CategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		328E4F152885BD4E002C0354 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EA62885C5D200F3ABA1 /* Custom UI */,
+				323D1EA32885C56100F3ABA1 /* Helpers */,
+				328E4F162885BD51002C0354 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		328E4F162885BD51002C0354 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				323D1E9A2885BF1300F3ABA1 /* View+onLoad.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +186,9 @@
 			dependencies = (
 			);
 			name = AnimalFacts;
+			packageProductDependencies = (
+				323D1EA12885C2C800F3ABA1 /* Kingfisher */,
+			);
 			productName = AnimalFacts;
 			productReference = 321CF1232885B59F005A13BB /* AnimalFacts.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 321CF11A2885B59F005A13BB;
+			packageReferences = (
+				323D1EA02885C2C800F3ABA1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 321CF1242885B59F005A13BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321CF12E2885B5A3005A13BB /* Preview Assets.xcassets in Resources */,
+				328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */,
 				321CF12B2885B5A3005A13BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				321CF1292885B59F005A13BB /* ContentView.swift in Sources */,
+				321CF1292885B59F005A13BB /* CategoriesView.swift in Sources */,
 				321CF1272885B59F005A13BB /* AnimalFactsApp.swift in Sources */,
+				328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */,
+				323D1E9B2885BF1300F3ABA1 /* View+onLoad.swift in Sources */,
+				323D1E9F2885BFF500F3ABA1 /* CategoryCellView.swift in Sources */,
+				323D1EA52885C56B00F3ABA1 /* Device.swift in Sources */,
+				328E4F0F2885B85D002C0354 /* Category.swift in Sources */,
+				323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -273,8 +389,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +420,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +433,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		323D1EA02885C2C800F3ABA1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		323D1EA12885C2C800F3ABA1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 323D1EA02885C2C800F3ABA1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 321CF11B2885B59F005A13BB /* Project object */;
 }
