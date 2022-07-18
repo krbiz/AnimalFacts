@@ -12,7 +12,7 @@ struct SelectableButtonStyle: ButtonStyle {
         ZStack(alignment: .leading) {
             configuration.label
                 .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
-                .brightness(configuration.isPressed ? 0.1 : 0)
+                .brightness(configuration.isPressed ? -0.1 : 0)
                 .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
         }
     }

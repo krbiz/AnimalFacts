@@ -16,6 +16,8 @@
 		323D1EA22885C2C800F3ABA1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 323D1EA12885C2C800F3ABA1 /* Kingfisher */; };
 		323D1EA52885C56B00F3ABA1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EA42885C56B00F3ABA1 /* Device.swift */; };
 		323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */; };
+		323D1EAA2885C74C00F3ABA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323D1EA92885C74C00F3ABA1 /* Launch Screen.storyboard */; };
+		323D1EAC2885CA1A00F3ABA1 /* Color+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */; };
 		328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */ = {isa = PBXBuildFile; fileRef = 328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */; };
 		328E4F0F2885B85D002C0354 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F0E2885B85D002C0354 /* Category.swift */; };
 		328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F132885BC33002C0354 /* CategoriesViewModel.swift */; };
@@ -31,6 +33,8 @@
 		323D1E9E2885BFF500F3ABA1 /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
 		323D1EA42885C56B00F3ABA1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
+		323D1EA92885C74C00F3ABA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+custom.swift"; sourceTree = "<group>"; };
 		328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ios-challenge-words-booster.json"; sourceTree = "<group>"; };
 		328E4F0E2885B85D002C0354 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		328E4F132885BC33002C0354 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 				321CF1262885B59F005A13BB /* AnimalFactsApp.swift */,
 				328E4F152885BD4E002C0354 /* Shared */,
 				328E4F0A2885B7E6002C0354 /* Categories */,
-				328E4F072885B7C0002C0354 /* Recources */,
+				328E4F072885B7C0002C0354 /* Resources */,
 				321CF12C2885B5A3005A13BB /* Preview Content */,
 			);
 			path = AnimalFacts;
@@ -108,13 +112,14 @@
 			path = "Custom UI";
 			sourceTree = "<group>";
 		};
-		328E4F072885B7C0002C0354 /* Recources */ = {
+		328E4F072885B7C0002C0354 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				321CF12A2885B5A3005A13BB /* Assets.xcassets */,
+				323D1EA92885C74C00F3ABA1 /* Launch Screen.storyboard */,
 				328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */,
 			);
-			path = Recources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		328E4F0A2885B7E6002C0354 /* Categories */ = {
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				323D1E9A2885BF1300F3ABA1 /* View+onLoad.swift */,
+				323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			files = (
 				321CF12E2885B5A3005A13BB /* Preview Assets.xcassets in Resources */,
 				328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */,
+				323D1EAA2885C74C00F3ABA1 /* Launch Screen.storyboard in Resources */,
 				321CF12B2885B5A3005A13BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +261,7 @@
 				323D1E9F2885BFF500F3ABA1 /* CategoryCellView.swift in Sources */,
 				323D1EA52885C56B00F3ABA1 /* Device.swift in Sources */,
 				328E4F0F2885B85D002C0354 /* Category.swift in Sources */,
+				323D1EAC2885CA1A00F3ABA1 /* Color+custom.swift in Sources */,
 				323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,9 +397,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,9 +430,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

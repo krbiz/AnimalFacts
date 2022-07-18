@@ -28,14 +28,14 @@ struct CategoriesView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .background(
-                Color.purple
-                    .ignoresSafeArea()
-            )
             .overlay(
-                Color.purple
+                Color.custom(.purple)
                     .frame(height: Device.safeAreaInset.top)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .ignoresSafeArea()
+            )
+            .background(
+                Color.custom(.purple)
                     .ignoresSafeArea()
             )
         }

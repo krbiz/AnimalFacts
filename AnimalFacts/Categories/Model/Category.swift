@@ -24,7 +24,7 @@ struct AnimalContent: Codable {
 enum Status: String, Codable {
     case free
     case paid
-    case comingSoon = ""
+    case unknown = ""
 }
 
 // MARK: - Comparable

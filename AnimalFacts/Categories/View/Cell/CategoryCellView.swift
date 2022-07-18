@@ -17,29 +17,49 @@ struct CategoryCellView: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 120, height: 90)
-                .clipped()
+                .cornerRadius(3)
             
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(category.title)
-                    .font(.system(size: 16, weight: .regular))
+                    .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.black)
                 
                 Text(category.description)
-                    .font(.system(size: 12, weight: .regular))
-                    .lineLimit(5)
+                    .font(.system(size: 12, weight: .semibold))
+                    .lineLimit(3)
                     .foregroundColor(.black)
                     .opacity(0.5)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
+                
+                if category.status == .paid {
+                    Spacer()
+                    
+                    HStack(spacing: 2) {
+                        Image(systemName: "lock.fill")
+                        
+                        Text("Premium")
+                    }
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.custom(.blue))
+                }
             }
-            .padding(.top, 5)
+            .padding(.vertical, 5)
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 5)
-        .background(
-            Color.white
-                .cornerRadius(6)
-                .shadow(color: .black.opacity(0.2), radius: 2, y: 2)
+        .padding(8)
+        .overlay(
+            Group {
+                if category.status == .unknown {
+                    Image("coming-soon")
+                        .rotationEffect(.degrees(45))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                        .padding(.trailing, 14)
+                        .background(Color.black.opacity(0.6))
+                }
+            }
         )
+        .background(Color.white)
+        .cornerRadius(6)
+        .shadow(color: .black.opacity(0.2), radius: 2, y: 2)
     }
 }
 
