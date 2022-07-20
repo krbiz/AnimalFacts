@@ -24,6 +24,7 @@
 		328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */ = {isa = PBXBuildFile; fileRef = 328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */; };
 		328E4F0F2885B85D002C0354 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F0E2885B85D002C0354 /* Category.swift */; };
 		328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F132885BC33002C0354 /* CategoriesViewModel.swift */; };
+		32F1EC0028884432006D6262 /* AlertNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1EBFF28884432006D6262 /* AlertNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ios-challenge-words-booster.json"; sourceTree = "<group>"; };
 		328E4F0E2885B85D002C0354 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		328E4F132885BC33002C0354 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		32F1EBFF28884432006D6262 /* AlertNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		328E4F0B2885B7F7002C0354 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				32F1EBFE28884426006D6262 /* Model */,
 				323D1E9C2885BFD900F3ABA1 /* Cell */,
 				321CF1282885B59F005A13BB /* CategoriesView.swift */,
 			);
@@ -223,6 +226,14 @@
 				323D1EAD2885CFA900F3ABA1 /* UINavigationController+backButton.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32F1EBFE28884426006D6262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32F1EBFF28884432006D6262 /* AlertNavigator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +318,7 @@
 				321CF1272885B59F005A13BB /* AnimalFactsApp.swift in Sources */,
 				323D1EAE2885CFA900F3ABA1 /* UINavigationController+backButton.swift in Sources */,
 				328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */,
+				32F1EC0028884432006D6262 /* AlertNavigator.swift in Sources */,
 				323D1E9B2885BF1300F3ABA1 /* View+onLoad.swift in Sources */,
 				323D1E9F2885BFF500F3ABA1 /* CategoryCellView.swift in Sources */,
 				323D1EB72885D44D00F3ABA1 /* FactCellView.swift in Sources */,
