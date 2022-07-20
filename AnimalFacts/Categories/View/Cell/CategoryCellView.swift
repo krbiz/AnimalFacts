@@ -17,6 +17,7 @@ struct CategoryCellView: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 120, height: 90)
+                .background(Color.gray.opacity(0.5))
                 .cornerRadius(3)
             
             VStack(alignment: .leading, spacing: 4) {

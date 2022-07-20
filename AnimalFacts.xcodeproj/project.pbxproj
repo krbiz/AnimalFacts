@@ -18,6 +18,9 @@
 		323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */; };
 		323D1EAA2885C74C00F3ABA1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323D1EA92885C74C00F3ABA1 /* Launch Screen.storyboard */; };
 		323D1EAC2885CA1A00F3ABA1 /* Color+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */; };
+		323D1EAE2885CFA900F3ABA1 /* UINavigationController+backButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EAD2885CFA900F3ABA1 /* UINavigationController+backButton.swift */; };
+		323D1EB42885D07B00F3ABA1 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EB32885D07B00F3ABA1 /* FactsView.swift */; };
+		323D1EB72885D44D00F3ABA1 /* FactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323D1EB62885D44D00F3ABA1 /* FactCellView.swift */; };
 		328E4F092885B7D6002C0354 /* ios-challenge-words-booster.json in Resources */ = {isa = PBXBuildFile; fileRef = 328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */; };
 		328E4F0F2885B85D002C0354 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F0E2885B85D002C0354 /* Category.swift */; };
 		328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E4F132885BC33002C0354 /* CategoriesViewModel.swift */; };
@@ -35,6 +38,9 @@
 		323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
 		323D1EA92885C74C00F3ABA1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+custom.swift"; sourceTree = "<group>"; };
+		323D1EAD2885CFA900F3ABA1 /* UINavigationController+backButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+backButton.swift"; sourceTree = "<group>"; };
+		323D1EB32885D07B00F3ABA1 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
+		323D1EB62885D44D00F3ABA1 /* FactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCellView.swift; sourceTree = "<group>"; };
 		328E4F082885B7D6002C0354 /* ios-challenge-words-booster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ios-challenge-words-booster.json"; sourceTree = "<group>"; };
 		328E4F0E2885B85D002C0354 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		328E4F132885BC33002C0354 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 				321CF1262885B59F005A13BB /* AnimalFactsApp.swift */,
 				328E4F152885BD4E002C0354 /* Shared */,
 				328E4F0A2885B7E6002C0354 /* Categories */,
+				323D1EAF2885D05E00F3ABA1 /* Facts */,
 				328E4F072885B7C0002C0354 /* Resources */,
 				321CF12C2885B5A3005A13BB /* Preview Content */,
 			);
@@ -110,6 +117,47 @@
 				323D1EA72885C62900F3ABA1 /* SelectableButtonStyle.swift */,
 			);
 			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		323D1EAF2885D05E00F3ABA1 /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EB22885D06900F3ABA1 /* Model */,
+				323D1EB12885D06800F3ABA1 /* View */,
+				323D1EB02885D06600F3ABA1 /* ViewModel */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		323D1EB02885D06600F3ABA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		323D1EB12885D06800F3ABA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EB52885D43100F3ABA1 /* Subviews */,
+				323D1EB32885D07B00F3ABA1 /* FactsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		323D1EB22885D06900F3ABA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		323D1EB52885D43100F3ABA1 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				323D1EB62885D44D00F3ABA1 /* FactCellView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		328E4F072885B7C0002C0354 /* Resources */ = {
@@ -172,6 +220,7 @@
 			children = (
 				323D1E9A2885BF1300F3ABA1 /* View+onLoad.swift */,
 				323D1EAB2885CA1A00F3ABA1 /* Color+custom.swift */,
+				323D1EAD2885CFA900F3ABA1 /* UINavigationController+backButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,12 +305,15 @@
 			files = (
 				321CF1292885B59F005A13BB /* CategoriesView.swift in Sources */,
 				321CF1272885B59F005A13BB /* AnimalFactsApp.swift in Sources */,
+				323D1EAE2885CFA900F3ABA1 /* UINavigationController+backButton.swift in Sources */,
 				328E4F142885BC33002C0354 /* CategoriesViewModel.swift in Sources */,
 				323D1E9B2885BF1300F3ABA1 /* View+onLoad.swift in Sources */,
 				323D1E9F2885BFF500F3ABA1 /* CategoryCellView.swift in Sources */,
+				323D1EB72885D44D00F3ABA1 /* FactCellView.swift in Sources */,
 				323D1EA52885C56B00F3ABA1 /* Device.swift in Sources */,
 				328E4F0F2885B85D002C0354 /* Category.swift in Sources */,
 				323D1EAC2885CA1A00F3ABA1 /* Color+custom.swift in Sources */,
+				323D1EB42885D07B00F3ABA1 /* FactsView.swift in Sources */,
 				323D1EA82885C62900F3ABA1 /* SelectableButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

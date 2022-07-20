@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    @StateObject var viewModel = CategoriesViewModel()
+    @StateObject private var viewModel = CategoriesViewModel()
+    @State private var showFacts: Bool = false
+    @State private var selectedCategory: Category?
     
     var body: some View {
         NavigationView {
@@ -16,7 +18,8 @@ struct CategoriesView: View {
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.categories, id: \.order) { category in
                         Button {
-                            
+                            selectedCategory = category
+                            showFacts = true
                         } label: {
                             CategoryCellView(category: category)
                         }
@@ -37,6 +40,15 @@ struct CategoriesView: View {
             .background(
                 Color.custom(.purple)
                     .ignoresSafeArea()
+            )
+            .overlay(
+                NavigationLink(isActive: $showFacts, destination: {
+                    if let category = selectedCategory {
+                        FactsView(category: category)
+                    }
+                }, label: {
+                    EmptyView()
+                })
             )
         }
         .onLoad {
