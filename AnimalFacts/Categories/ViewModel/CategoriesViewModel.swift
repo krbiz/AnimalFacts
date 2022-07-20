@@ -8,9 +8,14 @@
 import SwiftUI
 
 class CategoriesViewModel: ObservableObject {
-    
     @Published var categories: [Category] = []
     @Published var isFetching: Bool = false
+    
+    var favourites: [Fact] {
+        categories
+            .flatMap { $0.content }
+            .filter { $0.isFavourite }
+    }
     
     func fetchData() {
         defer {

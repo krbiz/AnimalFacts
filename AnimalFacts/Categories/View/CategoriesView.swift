@@ -10,13 +10,22 @@ import SwiftUI
 struct CategoriesView: View {
     @StateObject private var viewModel = CategoriesViewModel()
     @State private var showFacts: Bool = false
-    @State private var selectedCategory: Category?
+    @State private var selectedIndex: Int?
     @State private var showAlert: AlertNavigator?
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVStack(spacing: 16) {
+                    if !viewModel.favourites.isEmpty {
+                        Button {
+                            clickedFavourites()
+                        } label: {
+                            FavouriteCellView(factsCount: viewModel.favourites.count)
+                        }
+                        .buttonStyle(SelectableButtonStyle())
+                    }
+                    
                     ForEach(viewModel.categories, id: \.order) { category in
                         Button {
                             clickedCategory(category)
@@ -43,8 +52,13 @@ struct CategoriesView: View {
             )
             .overlay(
                 NavigationLink(isActive: $showFacts, destination: {
-                    if let category = selectedCategory {
-                        FactsView(category: category)
+                    if let index = selectedIndex {
+                        if index == -1 {
+                            let favouritesCategory = Category(order: 0, title: "", description: "", image: "", status: .free, content: viewModel.favourites)
+                            FactsView(category: .constant(favouritesCategory))
+                        } else {
+                            FactsView(category: $viewModel.categories[index])
+                        }
                     }
                 }, label: {
                     EmptyView()
@@ -101,7 +115,7 @@ struct CategoriesView: View {
     // MARK: - User actions
     
     private func clickedCategory(_ category: Category) {
-        selectedCategory = category
+        selectedIndex = viewModel.categories.firstIndex(of: category)
         switch category.status {
         case .free:
             showFacts = true
@@ -110,6 +124,11 @@ struct CategoriesView: View {
         case .unknown:
             showAlert = .comingSoonAlert
         }
+    }
+    
+    private func clickedFavourites() {
+        selectedIndex = -1
+        showFacts = true
     }
     
     private func clickedShowAdd() {

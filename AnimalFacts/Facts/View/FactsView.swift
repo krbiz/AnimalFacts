@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct FactsView: View {
-    let category: Category
+    @Binding var category: Category
     @State private var selectedTab: Int = 0
     
     var body: some View {
-        let facts = category.content ?? []
-        
         return TabView(selection: $selectedTab) {
             Group {
-                ForEach(facts.indices, id: \.self) { index in
-                    FactCellView(fact: facts[index], index: $selectedTab, count: facts.count)
+                ForEach(category.content.indices, id: \.self) { index in
+                    FactCellView(fact: $category.content[index], index: $selectedTab, count: category.content.count)
                         .id(index)
                 }
             }

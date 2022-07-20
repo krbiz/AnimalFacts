@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct FactCellView: View {
-    let fact: AnimalContent
+    @Binding var fact: Fact
     @Binding var index: Int
     let count: Int
     
@@ -43,6 +43,27 @@ struct FactCellView: View {
                 }
                 .opacity(index == 0 ? 0.5 : 1)
                 .disabled(index == 0)
+                
+                Spacer()
+                
+                Button {
+                    fact.isFavourite.toggle()
+                } label: {
+                    Group {
+                        if fact.isFavourite {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.white)
+                                .frame(width: 52, height: 52)
+                                .background(Circle().fill(Color.black))
+                        } else {
+                            Image(systemName: "star")
+                                .foregroundColor(.black)
+                                .frame(width: 52, height: 52)
+                                .background(Circle().strokeBorder(Color.black, lineWidth: 3))
+                        }
+                    }
+                    .font(.system(size: 20, weight: .bold))
+                }
                 
                 Spacer()
                 
