@@ -54,7 +54,14 @@ struct CategoriesView: View {
                 NavigationLink(isActive: $showFacts, destination: {
                     if let index = selectedIndex {
                         if index == -1 {
-                            let favouritesCategory = Category(order: 0, title: "", description: "", image: "", status: .free, content: viewModel.favourites)
+                            let favouritesCategory = Category(
+                                order: 0,
+                                title: "Favourites ⭐️",
+                                description: "",
+                                image: "",
+                                status: .free,
+                                content: viewModel.favourites
+                            )
                             FactsView(category: .constant(favouritesCategory))
                         } else {
                             FactsView(category: $viewModel.categories[index])
